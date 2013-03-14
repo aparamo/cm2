@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @reward.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @reward.description %>
+</p>
+
+<p>
+  <b>Unlocked:</b>
+  <%= @reward.unlocked %>
+</p>
+
+<p>
+  <b>File url:</b>
+  <%= @reward.file_url %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @reward.level_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_reward_path(@reward) %> |
+<%= link_to 'Back', rewards_path %>

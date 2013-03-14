@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @level.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @level.description.html_safe %>
+</p>
+
+<p>
+  <b>Extra:</b>
+  <%= @level.extra %>
+</p>
+
+<p>
+  <b>Fun url:</b>
+  <%= @level.fun_url %>
+</p>
+
+<p>
+  <b>Science url:</b>
+  <%= @level.science_url %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @level.image_url %>
+</p>
+
+<p>
+  <b>Rewards:</b>
+
+
+<% for reward in @level.rewards %>
+<ul>
+  <li><%= reward.title %></li>
+  
+</ul>
+<% end %>
+
+
+  <%=  %>
+</p>
+
+
+<%= link_to 'Edit', edit_level_path(@level) %> |
+<%= link_to 'Back', levels_path %>
