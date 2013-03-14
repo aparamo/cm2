@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @puzzle.title %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @puzzle.question %>
+</p>
+
+<p>
+  <b>Ex:</b>
+  <%= @puzzle.ex %>
+</p>
+
+<p>
+  <b>Ex2:</b>
+  <%= @puzzle.ex2 %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @puzzle.level_id %>
+</p>
+
+<p>
+  <b>I:</b>
+  <%= @puzzle.i %>
+</p>
+
+<p>
+  <b>I2:</b>
+  <%= @puzzle.i2 %>
+</p>
+
+<p>
+  <b>Video:</b>
+  <%= @puzzle.video %>
+</p>
+
+
+<%= link_to 'Edit', edit_puzzle_path(@puzzle) %> |
+<%= link_to 'Back', puzzles_path %>

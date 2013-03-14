@@ -1,0 +1,37 @@
+<h1>Listing puzzles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Question</th>
+    <th>Ex</th>
+    <th>Ex2</th>
+    <th>Level</th>
+    <th>I</th>
+    <th>I2</th>
+    <th>Video</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @puzzles.each do |puzzle| %>
+  <tr>
+    <td><%= puzzle.title %></td>
+    <td><%= puzzle.question %></td>
+    <td><%= puzzle.ex %></td>
+    <td><%= puzzle.ex2 %></td>
+    <td><%= puzzle.level_id %></td>
+    <td><%= puzzle.i %></td>
+    <td><%= puzzle.i2 %></td>
+    <td><%= puzzle.video %></td>
+    <td><%= link_to 'Show', puzzle %></td>
+    <td><%= link_to 'Edit', edit_puzzle_path(puzzle) %></td>
+    <td><%= link_to 'Destroy', puzzle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Puzzle', new_puzzle_path %>

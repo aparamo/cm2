@@ -35,6 +35,16 @@
     <%= f.label :image_url %><br />
     <%= f.text_field :image_url %>
   </div>
+
+  <%= f.fields_for :puzzle do |builder| %>
+    <fieldset>
+      <%= builder.label :question, "Q" %><br />
+      <%= builder.text_area :question %>
+      <%= builder.check_box :_destroy %>
+      <%= builder.label :_destroy, "remove puzzle" %>
+    </fieldset>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,4 +1,10 @@
 Cmixdos::Application.routes.draw do
+  resources :answers
+
+
+  resources :puzzles
+
+
   devise_for :users
 
   resources :users

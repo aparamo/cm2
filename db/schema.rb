@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130314203116) do
+ActiveRecord::Schema.define(:version => 20130314222733) do
+
+  create_table "answers", :force => true do |t|
+    t.string   "title"
+    t.text     "explanation"
+    t.string   "ex"
+    t.string   "ex2"
+    t.integer  "puzzle_id"
+    t.string   "i"
+    t.string   "i2"
+    t.string   "video"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "reward_id"
+  end
 
   create_table "levels", :force => true do |t|
     t.string   "title"
@@ -22,6 +36,19 @@ ActiveRecord::Schema.define(:version => 20130314203116) do
     t.string   "image_url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "puzzles", :force => true do |t|
+    t.string   "title"
+    t.text     "question"
+    t.string   "ex"
+    t.string   "ex2"
+    t.integer  "level_id"
+    t.string   "i"
+    t.string   "i2"
+    t.string   "video"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "rewards", :force => true do |t|

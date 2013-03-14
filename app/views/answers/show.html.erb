@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @answer.title %>
+</p>
+
+<p>
+  <b>Explanation:</b>
+  <%= @answer.explanation %>
+</p>
+
+<p>
+  <b>Ex:</b>
+  <%= @answer.ex %>
+</p>
+
+<p>
+  <b>Ex2:</b>
+  <%= @answer.ex2 %>
+</p>
+
+<p>
+  <b>Puzzle:</b>
+  <%= @answer.puzzle_id %>
+</p>
+
+<p>
+  <b>I:</b>
+  <%= @answer.i %>
+</p>
+
+<p>
+  <b>I2:</b>
+  <%= @answer.i2 %>
+</p>
+
+<p>
+  <b>Video:</b>
+  <%= @answer.video %>
+</p>
+
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>
