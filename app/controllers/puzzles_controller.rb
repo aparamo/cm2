@@ -80,4 +80,29 @@ class PuzzlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def play
+    @puzzle = Puzzle.find(params[:id])
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @puzzle }
+    end
+  end
+
+  def answ
+    puzzle = Puzzle.find(params[:id])
+
+    if params[:answ] == puzzle.answer
+      @puresult = "correct " + puzzle.answer + "  -  " + params[:answ]
+    else
+      @puresult = "no, no " + puzzle.answer + "  -  " + params[:answ]
+    end
+
+    respond_to do |format|
+      format.html 
+      format.json { render json: @puzzle }
+    end
+  end
+
 end

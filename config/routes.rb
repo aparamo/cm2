@@ -22,6 +22,10 @@ Cmixdos::Application.routes.draw do
 
   match "/levels/:id/unlock" => "levels#unlock"
 
+  match "/puzzles/:id/play" => "puzzles#play", as: :puzzles_play
+
+  match "/puzzles/:id/answ" => "puzzles#answ", as: :puzzles_answ
+
   root :to => 'games#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

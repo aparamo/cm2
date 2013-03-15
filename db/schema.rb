@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315025539) do
+ActiveRecord::Schema.define(:version => 20130315032159) do
 
   create_table "answers", :force => true do |t|
     t.string   "title"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130315025539) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.boolean  "unlocked"
+    t.integer  "num"
   end
 
   create_table "puzzles", :force => true do |t|
@@ -82,7 +83,7 @@ ActiveRecord::Schema.define(:version => 20130315025539) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "clevel", :default => 0
+    t.integer  "clevel"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
