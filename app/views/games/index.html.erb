@@ -12,7 +12,7 @@
     <p><%= level.fun_url %></p>
     <p><%= level.science_url %></p>
     <p><%= level.image_url %></p>
-    <% if !level.unlocked %>
+    <% if current_user.clevel < level.num %>
     	<p>Locked</p>
     <% else %>
       <p><%= link_to "Play", levels_play_path(level), :class => 'btn btn-success' %></p>

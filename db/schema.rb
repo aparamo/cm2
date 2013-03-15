@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315032159) do
+ActiveRecord::Schema.define(:version => 20130315064925) do
 
   create_table "answers", :force => true do |t|
     t.string   "title"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20130315032159) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "answer"
+    t.integer  "reward_id"
   end
 
   create_table "rewards", :force => true do |t|
@@ -83,7 +84,7 @@ ActiveRecord::Schema.define(:version => 20130315032159) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "clevel"
+    t.integer  "clevel",          :default => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -79,6 +79,12 @@
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
           </div><!--/.well -->
+
+          <div>
+            <% if user_signed_in? %>
+            <h4>Currently at level <%= current_user.clevel %></h4>
+            <% end %>
+          </div>
         </div><!--/span-->
         <div class="span9">
           <%= bootstrap_flash %>

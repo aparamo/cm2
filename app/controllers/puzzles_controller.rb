@@ -95,8 +95,16 @@ class PuzzlesController < ApplicationController
 
     if params[:answ] == puzzle.answer
       @puresult = "correct " + puzzle.answer + "  -  " + params[:answ]
+      reward = Reward.find(puzzle.reward_id)
+      reward.unlock
+      l = Level.find(puzzle.level_id)
+      cu = current_user.clevel
+      if cu == l.num
+        current_user.update_attribute(:clevel, cu + 1 )
+      end 
     else
       @puresult = "no, no " + puzzle.answer + "  -  " + params[:answ]
+      flash[:notice] = "Hints : " + puzzle.i
     end
 
     respond_to do |format|
