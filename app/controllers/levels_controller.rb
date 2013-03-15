@@ -81,4 +81,14 @@ class LevelsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def play
+    @level = Level.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @level }
+    end
+  end
 end

@@ -15,6 +15,8 @@ Cmixdos::Application.routes.draw do
 
   resources :levels
 
+  match "/levels/:id/play" => "levels#play"
+
   root :to => 'levels#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
