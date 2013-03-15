@@ -91,4 +91,16 @@ class LevelsController < ApplicationController
       format.json { render json: @level }
     end
   end
+
+  def unlock
+    @level = Level.find(params[:id])
+
+    @level.update_attribute(:unlocked, true)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @level }
+    end
+  end
+
 end

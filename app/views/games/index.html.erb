@@ -1,0 +1,19 @@
+<div id="welcome" class="level_intro">
+
+<h2>Welcome!</h2>
+
+<h3>Levels</h3>
+<% @levels.each do |level| %>
+  <div>
+
+    <p><%= level.title %></p>
+    <p><%= level.description %></p>
+    <p><%= level.extra %></p>
+    <p><%= level.fun_url %></p>
+    <p><%= level.science_url %></p>
+    <p><%= level.image_url %></p>
+    <p><%= link_to "Play", levels_play_path(level), :class => 'btn btn-success' %></p>
+   
+  </div>
+<% end %>
+</div>

@@ -1,4 +1,7 @@
 Cmixdos::Application.routes.draw do
+  resources :games
+
+
   resources :answers
 
 
@@ -15,9 +18,11 @@ Cmixdos::Application.routes.draw do
 
   resources :levels
 
-  match "/levels/:id/play" => "levels#play"
+  match "/levels/:id/play" => "levels#play", as: :levels_play
 
-  root :to => 'levels#index'
+  match "/levels/:id/unlock" => "levels#unlock"
+
+  root :to => 'games#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
