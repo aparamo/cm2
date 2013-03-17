@@ -92,6 +92,7 @@ class PuzzlesController < ApplicationController
 
   def answ
     puzzle = Puzzle.find(params[:id])
+    @puzzle = puzzle
 
     if params[:answ] == puzzle.answer
       @puresult = "correct " + puzzle.answer + "  -  " + params[:answ]

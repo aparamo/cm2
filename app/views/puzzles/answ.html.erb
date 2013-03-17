@@ -1,3 +1,12 @@
-<div class="puresult">
+<div class="span12">
+<div class="span12 puresult">
 	<%= @puresult %>
+</div>
+<div class="span12">
+<%= form_tag("/puzzles/#{@puzzle.id}/answ", :method => "post") do %>
+    <%= label_tag(:answ, "answer:") %>
+    <%= text_field_tag(:answ) %>
+    <%= submit_tag("Answer") %>
+    <% end %>
+</div>
 </div>

@@ -91,4 +91,5 @@ class RewardsController < ApplicationController
       format.json { render json: @rewards }
     end
   end
+  
 end
