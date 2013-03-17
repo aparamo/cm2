@@ -19,7 +19,7 @@ h2.level_start {
 	font-family: 'Marcellus SC', serif;
 	font-size: 20px;
 }
-.level_intro h3{
+.level_intro h3, #welcome h3, .puzzle_wrapper h3{
 	font-family: 'Marcellus SC', serif;
 	font-size: 16px;
 	color: #333;
@@ -37,7 +37,15 @@ h2.level_start {
 	font-family: 'Quando', serif;
 	font-size: 12px;
 }
-p.science_txt, .science_text{
-	font-family: 'Libre Baskerville', serif;
+.level_puzzles p{
+	font-family: 'Quando', serif;
 	font-size: 12px;
+}
+p.science_txt, .science_text, .puzzle_wrapper p{
+	font-family: 'Libre Baskerville', serif;
+	font-size: 14px;
+    line-height: 24px;
+}
+.puzzle_wrapper{
+
 }

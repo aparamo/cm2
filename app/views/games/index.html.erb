@@ -1,4 +1,4 @@
-<div id="welcome" class="level_intro">
+<div id="welcome" class="span12">
 
 <h2 class="level_start">Welcome!</h2>
 <p class="science_txt">
@@ -11,7 +11,7 @@ To begin with, for you to be here now trillions of drifting atoms had somehow to
   <div class="span3">
 
     <h4><%= level.title %></h4>
-    <p><%= level.description.html_safe %></p>
+    <p><%= level.shortd%></p>
    
     <% if current_user.clevel < level.num %>
     	<p class="plocked">Locked</p>

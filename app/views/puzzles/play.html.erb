@@ -1,49 +1,50 @@
 <p id="notice"><%= notice %></p>
+<div class="span12">
+  <div class="puzzle_wrapper">
+    <h3>
+      <%= @puzzle.title %>
+    </h3>
+    <div class="puzzle_question">
+    <p>
+      <%= @puzzle.question %>
+    </p>
+    </div>
+    
+    <p>
+      <b>Ex:</b>
+      <%= @puzzle.ex %>
+    </p>
 
-<h3>
-  <%= @puzzle.title %>
-</h3>
+    <p>
+      <b>Ex2:</b>
+      <%= @puzzle.ex2 %>
+    </p>
 
-<p>
-  <b>Question:</b>
-  <%= @puzzle.question %>
-</p>
+    <p>
+      <b>Level:</b>
+      <%= @puzzle.level_id %>
+    </p>
 
-<p>
-  <b>Ex:</b>
-  <%= @puzzle.ex %>
-</p>
+    <p>
+      <b>I:</b>
+      <%= @puzzle.i %>
+    </p>
 
-<p>
-  <b>Ex2:</b>
-  <%= @puzzle.ex2 %>
-</p>
+    <p>
+      <b>I2:</b>
+      <%= @puzzle.i2 %>
+    </p>
 
-<p>
-  <b>Level:</b>
-  <%= @puzzle.level_id %>
-</p>
+    <p>
+      <b>Video:</b>
+      <%= @puzzle.video %>
+    </p>
 
-<p>
-  <b>I:</b>
-  <%= @puzzle.i %>
-</p>
+    <%= form_tag("/puzzles/#{@puzzle.id}/answ", :method => "post") do %>
+    <%= label_tag(:answ, "answer:") %>
+    <%= text_field_tag(:answ) %>
+    <%= submit_tag("Answer") %>
+    <% end %>
+  </div>
+</div>
 
-<p>
-  <b>I2:</b>
-  <%= @puzzle.i2 %>
-</p>
-
-<p>
-  <b>Video:</b>
-  <%= @puzzle.video %>
-</p>
-
-<%= form_tag("/puzzles/#{@puzzle.id}/answ", :method => "post") do %>
-  <%= label_tag(:answ, "answer:") %>
-  <%= text_field_tag(:answ) %>
-  <%= submit_tag("Answer") %>
-<% end %>
-
-
-<%= link_to 'Back', puzzles_path %>
