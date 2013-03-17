@@ -1,12 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @level.title %>
-</p>
+<h2 class="level_start">
+<%= @level.title %>
+</h2>
 
 <p>
-  <b>Description:</b>
   <%= @level.description.html_safe %>
 </p>
 
@@ -33,14 +31,16 @@
 <p>
   <b>Puzzles:</b>
 
-
-<% for p in @level.puzzles %>
 <ul>
-  <li><%= p.title %></li>
-  
-</ul>
-<% end %>
+<% for p in @level.puzzles %>
 
+  <li><%= p.title %> 
+    <%= link_to "Challenge Accepted!", puzzles_play_path(p), :class => 'btn btn-small' %>
+
+  </li>
+
+<% end %>
+</ul>
 
   <%=  %>
 </p>

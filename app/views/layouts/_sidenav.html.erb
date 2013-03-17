@@ -1,0 +1,10 @@
+<ul class="nav nav-list">
+	<li class="nav-header">Chapters</li>
+	<% @levels.each do |level| %>
+	<% if current_user.clevel < level.num %>
+	<li><%= level.title %></li>
+	<% else %>
+	<p><%= link_to level.title, levels_play_path(level), :class => 'sidebar_level' %></p>
+	<% end %>
+	<% end %>
+</ul>

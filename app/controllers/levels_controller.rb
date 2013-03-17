@@ -1,5 +1,6 @@
 class LevelsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
+
   # GET /levels
   # GET /levels.json
   def index
@@ -102,5 +103,6 @@ class LevelsController < ApplicationController
       format.json { render json: @level }
     end
   end
+
 
 end

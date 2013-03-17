@@ -1,21 +1,22 @@
 <div id="welcome" class="level_intro">
 
-<h2>Welcome!</h2>
-
-<h3>Levels</h3>
+<h2 class="level_start">Welcome!</h2>
+<p class="science_txt">
+Welcome. And congratulations. I am delighted that you could make it. Getting here wasn't easy, I know. In fact, I suspect it was a little tougher than you realize.
+<br>
+To begin with, for you to be here now trillions of drifting atoms had somehow to assemble in an intricate and intriguingly obliging manner to create you. It's an arrangement so specialized and particular that it has never been tried before and will only exist this once. For the next many years (we hope) these tiny particles will uncomplainingly engage in all the billions of deft, cooperative efforts necessary to keep you intact and let you experience the supremely agreeable but generally underappreciated state known as existence.
+</p>
+<h3>Chapters</h3>
 <% @levels.each do |level| %>
-  <div>
+  <div class="span3">
 
-    <p><%= level.title %></p>
-    <p><%= level.description %></p>
-    <p><%= level.extra %></p>
-    <p><%= level.fun_url %></p>
-    <p><%= level.science_url %></p>
-    <p><%= level.image_url %></p>
+    <h4><%= level.title %></h4>
+    <p><%= level.description.html_safe %></p>
+   
     <% if current_user.clevel < level.num %>
-    	<p>Locked</p>
+    	<p class="plocked">Locked</p>
     <% else %>
-      <p><%= link_to "Play", levels_play_path(level), :class => 'btn btn-success' %></p>
+      <p><%= link_to "Go!", levels_play_path(level), :class => 'btn btn-small' %></p>
     <% end %>
     
    
