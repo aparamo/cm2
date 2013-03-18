@@ -13,8 +13,13 @@ To begin with, for you to be here now trillions of drifting atoms had somehow to
     <h4><%= level.title %></h4>
     <p><%= level.shortd%></p>
    
-
-    
+    <% if user_signed_in? %>
+      <% if current_user.clevel < level.num %>
+      	<p class="plocked">Locked</p>
+      <% else %>
+        <p><%= link_to "Go!", levels_play_path(level), :class => 'btn btn-small' %></p>
+      <% end %>
+    <% end %>  
    
   </div>
 <% end %>
