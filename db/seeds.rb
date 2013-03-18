@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# Level.create(title: , description: , extra: , fun_url:, science_url: , unlocked: , nun: , shortd: ) 
+# Puzzle.create(title: , question: , ex: , ex2: , level_id: , i: , i2:, video:, reward_id: , #unlocked: )
