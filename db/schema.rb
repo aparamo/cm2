@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130317045852) do
+ActiveRecord::Schema.define(:version => 20130319062119) do
 
   create_table "answers", :force => true do |t|
     t.string   "title"
@@ -49,16 +49,17 @@ ActiveRecord::Schema.define(:version => 20130317045852) do
   create_table "puzzles", :force => true do |t|
     t.string   "title"
     t.text     "question"
-    t.string   "ex"
-    t.string   "ex2"
+    t.text     "ex"
+    t.text     "ex2"
     t.integer  "level_id"
-    t.string   "i"
-    t.string   "i2"
-    t.string   "video"
+    t.text     "i"
+    t.text     "i2"
+    t.text     "video"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "answer"
     t.integer  "reward_id"
+    t.boolean  "unlocked"
   end
 
   create_table "rewards", :force => true do |t|

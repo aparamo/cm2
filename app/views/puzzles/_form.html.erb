@@ -19,9 +19,14 @@
     <%= f.label :question %><br />
     <%= f.text_area :question %>
   </div>
-  <%= f.fields_for :answers do |builder| %>
-    <%= render 'answer_fields', f.builder %>
-  <% end %>
+  <div class="field">
+    <%= f.label :answer %><br />
+    <%= f.text_field :answer %>
+  </div>
+     <div class="field">
+    <%= f.label :unlocked %><br />
+    <%= f.check_box :unlocked %>
+  </div>
   <div class="field">
     <%= f.label :ex %><br />
     <%= f.text_area :ex %>
@@ -35,16 +40,20 @@
     <%= f.number_field :level_id %>
   </div>
   <div class="field">
+    <%= f.label :reward_id %><br />
+    <%= f.number_field :reward_id %>
+  </div>
+  <div class="field">
     <%= f.label :i %><br />
-    <%= f.text_field :i %>
+    <%= f.text_area :i %>
   </div>
   <div class="field">
     <%= f.label :i2 %><br />
-    <%= f.text_field :i2 %>
+    <%= f.text_area :i2 %>
   </div>
   <div class="field">
     <%= f.label :video %><br />
-    <%= f.text_field :video %>
+    <%= f.text_area :video %>
   </div>
   <div class="actions">
     <%= f.submit %>

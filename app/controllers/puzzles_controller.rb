@@ -92,11 +92,10 @@ class PuzzlesController < ApplicationController
 
   def answ
     puzzle = Puzzle.find(params[:id])
-    @puzzle = puzzle
-
+    rwdid = puzzle.reward_id
     if params[:answ] == puzzle.answer
       @puresult = "correct " + puzzle.answer + "  -  " + params[:answ]
-      reward = Reward.find(puzzle.reward_id)
+      reward = Reward.find(rwdid)
       reward.unlock
       l = Level.find(puzzle.level_id)
       cu = current_user.clevel
@@ -107,6 +106,7 @@ class PuzzlesController < ApplicationController
       @puresult = "no, no " + puzzle.answer + "  -  " + params[:answ]
       flash[:notice] = "Hints : " + puzzle.i
     end
+    @puzzle = puzzle
 
     respond_to do |format|
       format.html 
