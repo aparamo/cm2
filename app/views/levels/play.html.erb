@@ -25,24 +25,18 @@
 <div class="span12 paddingt50">
 
 <div class="span4">
-  <p>
-    <b>Image url:</b>
-    <%= @level.image_url %>
-  </p>
+    <%= @level.image_url.html_safe %>
 </div>
 <div class="span7">  
   <p>
-    <b>Extra:</b>
     <%= @level.extra %>
   </p></div>
 
 <div class="span12">
   <p>
-    <b>Fun url:</b>
     <%= @level.fun_url %>
   </p>
   <p>
-    <b>Science url:</b>
     <%= @level.science_url %>
   </p>
 </div>
