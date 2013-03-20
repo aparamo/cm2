@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130319062119) do
+ActiveRecord::Schema.define(:version => 20130320175019) do
 
   create_table "answers", :force => true do |t|
     t.string   "title"
@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(:version => 20130319062119) do
     t.string   "title"
     t.text     "description"
     t.text     "extra"
-    t.string   "fun_url"
-    t.string   "science_url"
-    t.string   "image_url"
+    t.text     "fun_url"
+    t.text     "science_url"
+    t.text     "image_url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.boolean  "unlocked"
