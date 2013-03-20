@@ -37,7 +37,7 @@
   </head>
   <body class='<%= "#{controller.controller_name}" %>'>
 
-    <div class="navbar navbar-fluid-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -52,7 +52,7 @@
               <li><%= link_to "Rewards", "/rewards"  %></li>
               <li><%= link_to "Puzzles", "/puzzles"  %></li>
               <li><%= link_to "Answers", "/answers"  %></li>
-              
+              <li><%= link_to "About", "/about"  %></li>
               <li><%= link_to "S", "/path3"  %></li>
             </ul>
             <div class="user_nav navbar-text pull-right">
@@ -73,7 +73,7 @@
       <div class="row-fluid">
         <div class="span3">
           <% if user_signed_in? %>
-          <div class="well sidebar-nav">
+          <div class="well sidebar-nav affix">
             <ul class="nav nav-list">
               <li class="nav-header">Chapters</li>
               <% levels=glvls() %>
@@ -85,9 +85,8 @@
               <% end %>
               <% end %>
             </ul>
-          </div><!--/.well -->
 
-          <div>
+             <div>
             <% if user_signed_in? %>
             <h4>Currently at level <%= current_user.clevel %></h4>
             <% end %>
@@ -95,6 +94,9 @@
           <% else %>
             <h4>Currently at the unknown</h4>
           <% end %>
+          </div><!--/.well -->
+
+         
         </div><!--/span-->
         <div class="span9">
           <%= bootstrap_flash %>

@@ -85,7 +85,6 @@ class RewardsController < ApplicationController
   def myrewards
 
     @rewards = Reward.where(:unlocked => true)
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @rewards }

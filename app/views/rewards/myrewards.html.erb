@@ -1,6 +1,8 @@
-
-<% for r in @rewards %>
-      <div class="span4">
+<div id="welcome" class="span11">
+  <div class="wwrapper">
+    <h2 class="level_start">Rewards</h2>
+    <% for r in @rewards %>
+      <div class="span12">
         <h4><%= r.title %> </h4>
         <p><%= r.description %> </p>
 
@@ -9,4 +11,8 @@
         <hr>
         <%= link_to "Download!", r.file_url, :class => 'btn btn-small' %>
       </div>
-      <% end %>
+     <% end %>
+   
+  </div>
+</div>
+	

@@ -1,49 +1,19 @@
 <p id="notice"><%= notice %></p>
-<div class="span12">
+<div class="span11">
   <div class="puzzle_wrapper">
     <h3>
       <%= @puzzle.title %>
     </h3>
     <div class="puzzle_question">
     <p>
-      <%= @puzzle.question %>
+      <%= @puzzle.question.html_safe %>
     </p>
     </div>
-    
-    <p>
-      <b>Ex:</b>
-      <%= @puzzle.ex %>
-    </p>
 
-    <p>
-      <b>Ex2:</b>
-      <%= @puzzle.ex2 %>
-    </p>
-
-    <p>
-      <b>Level:</b>
-      <%= @puzzle.level_id %>
-    </p>
-
-    <p>
-      <b>I:</b>
-      <%= @puzzle.i %>
-    </p>
-
-    <p>
-      <b>I2:</b>
-      <%= @puzzle.i2 %>
-    </p>
-
-    <p>
-      <b>Video:</b>
-      <%= @puzzle.video %>
-    </p>
-
-    <%= form_tag("/puzzles/#{@puzzle.id}/answ", :method => "post") do %>
-    <%= label_tag(:answ, "answer:") %>
+    <%= form_tag("/puzzles/#{@puzzle.id}/answ", :method => "post", :class => 'form-inline') do %>
+    <%= label_tag(:answ, "Answer:") %>
     <%= text_field_tag(:answ) %>
-    <%= submit_tag("Answer") %>
+    <%= submit_tag("Submit", :class => 'btn') %>
     <% end %>
   </div>
 </div>

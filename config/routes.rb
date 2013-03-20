@@ -30,6 +30,8 @@ Cmixdos::Application.routes.draw do
 
   match "myrewards" => "rewards#myrewards"
 
+  match "about" => "games#about"
+
   root :to => 'games#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,7 +1,8 @@
 <h1>Listing rewards</h1>
 
-<table>
+<table class="table">
   <tr>
+    <th>Id</th>
     <th>Title</th>
     <th>Description</th>
     <th>Unlocked</th>
@@ -14,6 +15,7 @@
 
 <% @rewards.each do |reward| %>
   <tr>
+    <td><%= reward.id %></td>
     <td><%= reward.title %></td>
     <td><%= reward.description %></td>
     <td><%= reward.unlocked %></td>
