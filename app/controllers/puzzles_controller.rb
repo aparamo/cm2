@@ -108,7 +108,7 @@ class PuzzlesController < ApplicationController
         current_user.update_attribute(:clevel, cu + 1 )
       end 
     else
-      @puresult = "No, no..." + puzzl.answer + "  -  " + params[:answ]
+      @puresult = "No, no..." 
       @answ = false
       flash[:notice] = "Hints : " + puzzl.i
     end
