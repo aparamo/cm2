@@ -48,12 +48,16 @@
           <a class="brand" href="/">CM2</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
+              <% if user_signed_in? %>
+              <% if current_user.name == 'adri' %>
               <li><%= link_to "Levels", "/levels"  %></li>
-              <li><%= link_to "Rewards", "/rewards"  %></li>
+              <li><%= link_to "ERewards", "/rewards"  %></li>
               <li><%= link_to "Puzzles", "/puzzles"  %></li>
               <li><%= link_to "Answers", "/answers"  %></li>
+              <% end %>
+              <% end %>
               <li><%= link_to "About", "/about"  %></li>
-              <li><%= link_to "S", "/path3"  %></li>
+              <li><%= link_to "Rewards", "/myrewards"  %></li>
             </ul>
             <div class="user_nav navbar-text pull-right">
               <% if user_signed_in? %>

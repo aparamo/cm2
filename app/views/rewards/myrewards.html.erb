@@ -6,7 +6,6 @@
         <h4><%= r.title %> </h4>
         <p><%= r.description.html_safe %> </p>
 
-        <p><%= r.file_url %></p>
 
         <hr>
         <%= link_to "Download!", r.file_url, :class => 'btn btn-small' %>
