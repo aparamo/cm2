@@ -1,10 +1,13 @@
 <h1>Listing puzzles</h1>
+<% if user_signed_in? %>
+<% if current_user.name == 'adri' %>
 
 <table class="table">
   <tr>
     <th>Id</th>
     <th>Title</th>
     <th>Question</th>
+    <th>A</th>
     <th>Level</th>
     <th>Reward</th>
     <th></th>
@@ -17,6 +20,7 @@
     <td><%= puzzle.id %></td>
     <td><%= puzzle.title %></td>
     <td><%= puzzle.question %></td>
+    <td><%= puzzle.answer %></td>
     <td><%= puzzle.level_id %></td>
     <td><%= puzzle.reward_id %></td>
     <td><%= link_to 'Show', puzzle %></td>
@@ -29,3 +33,5 @@
 <br />
 
 <%= link_to 'New Puzzle', new_puzzle_path %>
+<% end %>
+<% end %>
