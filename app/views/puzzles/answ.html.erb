@@ -1,22 +1,21 @@
 <div class="span11 puzzle_wrapper">
-<div class="span6">
+<div class="span12">
 <% if not @answ %>
 <%= image_tag "wrong.jpg" %>
+<h5><%= @puresult %></h5>
+
+<% else %>
+<h5><%= @puresult %></h5>
 <% end %>
-</div>
-<div class="span6">
-	<%= @puresult %>
+	
 </div>
 <% if @answ %>
 
-<div class="span12">
+<div class="puzzle_ex">
 	 <p>
       <%= @puzzle.ex.html_safe %>
     </p>
     <p>
-      <b>Video:</b>
-      <%= @puzzle.video %>
-    </p>
 </div>
 	
 <% else %>
